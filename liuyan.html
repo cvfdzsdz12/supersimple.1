@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>留言板</title>
+	<style>
+		/* 设置容器的最大宽度为800像素 */
+		.container {
+			max-width: 800px;
+			/* 居中显示 */
+			margin: 0 auto;
+			/* 内边距为20像素 */
+			padding: 20px;
+			/* 背景色为白色 */
+			background-color: #FFF;
+			/* 添加阴影 */
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			/* 圆角为10像素 */
+			border-radius: 10px;
+			/* 文字居中对齐 */
+			text-align: center;
+		}
+
+		/* 标题样式 */
+		h1 {
+			/* 字体大小为36像素 */
+			font-size: 36px;
+			/* 底部外边距为30像素 */
+			margin-bottom: 30px;
+			/* 字体颜色为粉色 */
+			color: #f8bbd0;
+		}
+
+		/* 表单样式 */
+		form {
+			/* 设置为弹性布局 */
+			display: flex;
+			/* 主轴方向为列 */
+			flex-direction: column;
+			/* 交叉轴居中对齐 */
+			align-items: center;
+		}
+
+		/* 输入框和文本域样式 */
+		input[type="text"],
+		textarea {
+			/* 内边距为10像素 */
+			padding: 10px;
+			/* 底部外边距为20像素 */
+			margin-bottom: 20px;
+			/* 圆角为5像素 */
+			border-radius: 5px;
+			/* 去掉边框 */
+			border: none;
+			/* 添加阴影 */
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			/* 宽度为100% */
+			width: 100%;
+			/* 最大宽度为600像素 */
+			max-width: 600px;
+			/* 禁止拖拽调整大小 */
+			resize: none;
+			/* 字体大小为16像素 */
+			font-size: 16px;
+			/* 字体颜色为灰色 */
+			color: #666;
+			/* 字体为Arial或sans-serif */
+			font-family: Arial, sans-serif;
+		}
+
+		/* 提交按钮样式 */
+		input[type="submit"] {
+			/* 背景色为粉色 */
+			background-color: #f8bbd0;
+			/* 字体颜色为白色 */
+			color: #FFF;
+			/* 上下内边距为10像素，左右内边距为20像素 */
+			padding: 10px 20px;
+			/* 去掉边框 */
+			border: none;
+			/* 圆角为5像素 */
+			border-radius: 5px;
+			/* 字体大小为18像素 */
+			font-size: 18px;
+			/* 光标为手型 */
+			cursor: pointer;
+			/* 添加背景色变化的过渡效果 */
+			transition: background-color 0.3s ease;
+		}
+
+		/* 鼠标悬停在提交按钮上的样式 */
+		input[type="submit"]:hover {
+			/* 背景色变为浅粉色 */
+			background-color: #ffa4b5;
+		}
+
+		/* 消息框样式 */
+		.message {
+			/* 上下外边距为20像素，左右外边距为自动 */
+			margin: 20px auto;
+			/* 背景色为白色 */
+			background-color: #FFF;
+			/* 添加阴影 */
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			/* 圆角为10像素 */
+			border-radius: 10px;
+			/* 内边距为10像素 */
+			padding: 10px;
+			/* 文字左对齐 */
+			text-align: left;
+			/* 最大宽度为600像素 */
+			max-width: 600px;
+			/* 宽度为100% */
+			width: 100%;
+		}
+
+		/* 消息框标题样式 */
+		.message h2 {
+			/* 字体大小为24像素 */
+			font-size: 24px;
+			/* 外边距为5像素 */
+			margin: 5px;
+			/* 字体颜色为粉色 */
+			color: #f8bbd0;
+		}
+
+		/* 消息框内容样式 */
+		.message p {
+			/* 字体大小为16像素 */
+			font-size: 16px;
+			/* 字体颜色为灰色 */
+			color: #666;
+			/* 底部外边距为15像素 */
+			margin-bottom: 15px;
+		}
+
+		/* 消息框底部附加信息样式 */
+		.message small {
+			/* 字体大小为12像素 */
+			font-size: 12px;
+			/* 字体颜色为灰色 */
+			color: #999;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>留言板</h1>
+		<form>
+			<input type="text" id="name" name="name" placeholder="请输入昵称">
+			<textarea id="message" name="message" rows="5" placeholder="请输入留言内容"></textarea>
+			<input type="submit" value="提交">
+		</form>
+		<div class="message">
+			<h2>一部很好的电视剧</h2>
+			<p>让我感受颇深，让我了解到大雄是一个有上进心的娃</p>
+			<small>大猫&nbsp;&nbsp;2023/6/12 14:38</small>
+		</div>
+		<div class="message">
+			<h2>很好的作品</h2>
+			<p>总所周知，哆啦A梦是一部日本漫画家藤本弘（笔名藤本Yoshimoto）创作的漫画作品，讲述了一只来自未来的机器猫哆啦A梦和他的主人野比世修（小学生）之间的故事。</p>
+			<small>大狗&nbsp;&nbsp;2023/6/12 16:14</small>
+		</div>
+		<div class="message">
+			<h2>我是煞笔</h2>
+			<p>我是煞笔</p>
+			<small>王中瑶&nbsp;&nbsp;2023/6/12 17:14</small>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#content {
+				margin: 0 auto; /* 设置页面内容居中对齐 */
+				width: 70%; /* 设置页面内容宽度为 70% */
+				padding: 50px; /* 设置页面内容的内边距为 50px */
+				text-align: center; /* 设置页面内容的文本对齐方式为居中对齐 */
+				position: relative; /* 设置页面内容的定位方式为相对定位 */
+			}
+
+			#box {
+				display: inline-block; /* 设置盒子为行内块级元素 */
+				vertical-align: middle; /* 设置盒子垂直居中对齐 */
+				margin: 20px; /* 设置盒子的外边距为 20px */
+				width: 300px; /* 设置盒子的宽度为 300px */
+				height: 300px; /* 设置盒子的高度为 300px */
+				background-color: #fff; /* 设置盒子的背景颜色为白色 */
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* 设置盒子的阴影效果 */
+				transition: all 0.3s ease; /* 设置盒子的过渡效果 */
+				position: relative; /* 设置盒子的定位方式为相对定位 */
+			}
+
+			#box:hover {
+				transform: translateY(-10px); /* 设置鼠标悬停时盒子的向上移动效果 */
+				box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); /* 设置鼠标悬停时盒子的阴影效果 */
+			}
+
+			#box img {
+				max-width: 100%; /* 设置图片的最大宽度为 100% */
+				max-height: 100%; /* 设置图片的最大高度为 100% */
+				position: absolute; /* 设置图片的定位方式为绝对定位 */
+				top: 0; /* 设置图片的上边距为 0 */
+				left: 0; /* 设置图片的左边距为 0 */
+				right: 0; /* 设置图片的右边距为 0 */
+				bottom: 0; /* 设置图片的下边距为 0 */
+				margin: auto; /* 设置图片的外边距为自动 */
+				opacity: 0; /* 设置图片的透明度为 0 */
+				transition: all 0.3s ease; /* 设置图片的过渡效果 */
+			}
+
+			#box:hover img {
+				opacity: 0.8; /* 设置鼠标悬停时图片的透明度为 0.8 */
+			}
+
+			#box h2 {
+				font-size: 24px; /* 设置标题的字体大小为 24px */
+				margin-top: 20px; /* 设置标题的上边距为 20px */
+				margin-bottom: 10px; /* 设置标题的下边距为 10px */
+				color: #000; /* 设置标题的颜色为黑色 */
+			}
+
+			#box p {
+				font-size: 18px; /* 设置段落的字体大小为 18px */
+				line-height: 1.5; /* 设置段落的行高为 1.5 */
+				color: #666; /* 设置段落的颜色为灰色 */
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div id="box">
+				<img src="img/xiaoduola.png" alt="哆啦A梦">
+				<h2>哆啦A梦</h2>
+				<p>哆啦A梦是一只来自22世纪的机器猫，可以使用各种神奇的道具，帮助主人野比世修和他的朋友们解决各种问题。</p>
+			</div>
+			<div id="box">
+				<img src="img/daxiong.png" alt="大雄">
+				<h2>野比大雄</h2>
+				<p>野比大雄是哆啦A梦的主人，是一个懒惰、胆小、笨拙的小学生，经常被同学欺负。</p>
+			</div>
+			<div id="box">
+				<img src="img/jingxiang.png" alt="静香">
+				<h2>静香</h2>
+				<p>源静香是大雄的同班同学，是一个聪明、美丽、善良的女孩，经常帮助大雄和他的朋友们。</p>
+			</div>
+			<div id="box">
+				<img src="img/panghu.png" alt="胖虎">
+				<h2>胖虎</h2>
+				<p>胖虎是大雄的同班同学，是一个爱吃、爱玩、爱捣蛋的男孩，经常和大雄一起玩耍。</p>
+			</div>
+			<div id="box">
+				<img src="img/xiaofu.png" alt="小夫">
+				<h2>小夫</h2>
+				<p>小夫是大雄的同班同学，是一个爱捣蛋的男孩，经常和胖虎大雄一起玩耍。</p>
+			</div>
+			<div id="box">
+				<img src="img/duolamei.png" alt="哆啦美">
+				<h2>哆啦美</h2>
+				<p>哆啦美是哆啦A梦的妹妹，她是一只优秀的机器猫。在哆啦A梦回22世纪检查时，哆啦美便暂时代替哥哥帮助大雄。</p>
+			</div>
+		</div>
+	</body>
+</html>

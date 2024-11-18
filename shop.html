@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>商品销售界面</title>
+	<style>
+		/* 重置所有元素的默认样式 */
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		/* 设置 body 元素的样式 */
+		body {
+			display: flex; /* 使用 flex 布局 */
+			justify-content: center; /* 水平居中 */
+			align-items: center; /* 垂直居中 */
+		}
+
+		/* 定义一个容器，设置其样式 */
+		.container {
+			width: 600px; /* 宽度为 600 像素 */
+			display: flex; /* 使用 flex 布局 */
+			flex-wrap: wrap; /* 换行 */
+			justify-content: center; /* 水平居中 */
+			align-items: center; /* 垂直居中 */
+			padding: 20px; /* 内边距为 20 像素 */
+		}
+
+		/* 定义一个项目，设置其样式 */
+		.item {
+			display: flex; /* 使用 flex 布局 */
+			flex-direction: column; /* 竖直方向排列子元素 */
+			align-items: center; /* 垂直居中 */
+			margin: 10px; /* 外边距为 10 像素 */
+			padding: 20px; /* 内边距为 20 像素 */
+			background-color: #FFF; /* 背景颜色为白色 */
+			border-radius: 200px; /* 圆角半径为 200 像素 */
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+			position: relative; /* 相对定位 */
+			overflow: hidden; /* 超出部分隐藏 */
+			transition: all 0.3s ease-in-out; /* 添加过渡效果 */
+			cursor: pointer; /* 鼠标指针为手型 */
+		}
+
+		/* 鼠标悬停时的样式 */
+		.item:hover {
+			transform: scale(1.1); /* 放大 1.1 倍 */
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+		}
+
+		/* 定义图片样式 */
+		.item img {
+			width: 100px; /* 宽度为 100 像素 */
+			height: 100px; /* 高度为 100 像素 */
+			margin-bottom: 10px; /* 底部外边距为 10 像素 */
+			object-fit: cover; /* 图片自适应 */
+			border-radius: 50%; /* 圆形 */
+			transition: all 0.3s ease-in-out; /* 添加过渡效果 */
+		}
+
+		/* 鼠标悬停时的图片样式 */
+		.item:hover img {
+			transform: rotate(360deg); /* 旋转 360 度 */
+		}
+
+		/* 定义标题样式 */
+		.item h3 {
+			font-size: 18px; /* 字体大小为 18 像素 */
+			font-weight: bold; /* 字体加粗 */
+			margin-bottom: 10px; /* 底部外边距为 10 像素 */
+			text-align: center; /* 居中对齐 */
+		}
+
+		/* 定义文本样式 */
+		.item p {
+			font-size: 14px; /* 字体大小为 14 像素 */
+			margin-bottom: 10px; /* 底部外边距为 10 像素 */
+			text-align: center; /* 居中对齐 */
+		}
+
+		/* 定义按钮样式 */
+		.item button {
+			background-color: #b9e4f4; /* 背景颜色为蓝色 */
+			color: #FFF; /* 字体颜色为白色 */
+			border: none; /* 去掉边框 */
+			border-radius: 20px; /* 圆角半径为 20 像素 */
+			padding: 10px 20px; /* 上下内边距为 10 像素，左右内边距为 20 像素 */
+			font-size: 14px; /* 字体大小为 14 像素 */
+			font-weight: bold; /* 字体加粗 */
+			cursor: pointer; /* 鼠标指针为手型 */
+			transition: all 0.3s ease-in-out; /* 添加过渡效果 */
+		}
+
+		/* 鼠标悬停时的按钮样式 */
+		.item button:hover {
+			background-color: #aad8f4; /* 背景颜色为深蓝色 */
+		}
+
+		/* 定义评论样式 */
+		.review {
+			display: flex; /* 使用 flex 布局 */
+			align-items: center; /* 垂直居中 */
+			padding: 10px; /* 内边距为 10 像素 */
+			border-top: 1px solid #e3e0e0; /* 上边框为灰色 */
+			justify-content: center; /* 水平居中 */
+		}
+
+		/* 定义头像样式 */
+		.avatar {
+			margin-right: 10px; /* 右侧外边距为 10 像素 */
+			width: 50px; /* 宽度为 50 像素 */
+			height: 50px; /* 高度为 50 像素 */
+			border-radius: 50%; /* 圆形 */
+			overflow: hidden; /* 超出部分隐藏 */
+		}
+
+		/* 头像图片样式 */
+		.avatar img {
+			width: 100%; /* 宽度为 100% */
+			height: 100%; /* 高度为 100% */
+			object-fit: cover; /* 图片自适应 */
+		}
+
+		/* 评论信息样式 */
+		.info {
+			flex: 1; /* 占据剩余空间 */
+		}
+
+		/* 评论人名样式 */
+		.name {
+			font-weight: bold; /* 字体加粗 */
+			margin-bottom: 5px; /* 底部外边距为 5 像素 */
+		}
+
+		/* 评论内容样式 */
+		.comment {
+			font-size: 14px; /* 字体大小为 14 像素 */
+			line-height: 1.5; /* 行高为 1.5 倍 */
+		}
+
+		/* 对话框样式 */
+		.talkshop {
+			width: 400px; /* 宽度为 400 像素 */
+			border: 2px solid #aad8f4; /* 边框为深蓝色 */
+			padding: 10px; /* 内边距为 10 像素 */
+			border-radius: 20px; /* 圆角半径为 20 像素 */
+		}
+
+		/* 对话框标题样式 */
+		.talkshop h4 {
+			color: #aad8f4; /* 字体颜色为深蓝色 */
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">
+			<img src="img/xiaoduola.png" alt="哆啦A梦">
+			<h3>哆啦A梦</h3>
+			<p>10元/只</p>
+			<button>购买</button>
+		</div>
+		<div class="item">
+			<img src="img/daxiong.png" alt="大雄">
+			<h3>野比大雄</h3>
+			<p>10元/只</p>
+			<button>购买</button>
+		</div>
+		<div class="item">
+			<img src="img/jingxiang.png" alt="静香">
+			<h3>静香</h3>
+			<p>10元/只</p>
+			<button>购买</button>
+		</div>
+		<div class="item">
+			<img src="img/panghu.png" alt="胖虎">
+			<h3>胖虎</h3>
+			<p>10元/只</p>
+			<button>购买</button>
+		</div>
+		<div class="item">
+			<img src="img/xiaofu.png" alt="小夫">
+			<h3>小夫</h3>
+			<p>10元/只</p>
+			<button>购买</button>
+		</div>
+		<div class="item">
+			<img src="img/duolamei.png" alt="哆啦美">
+			<h3>哆啦A美</h3>
+			<p>10元/只</p>
+			<button>购买</button>
+		</div>
+	</div>
+	<div class="talkshop">
+		<h4>商品评价</h4>
+		<div class="review">
+			<div class="avatar">
+				<img src="img/logo.png" alt="Avatar">
+			</div>
+			<div class="info">
+				<div class="name">111</div>
+				<div class="comment">产品非常好会回购</div>
+			</div>
+		</div>
+		<div class="review">
+			<div class="avatar">
+				<img src="img/logo.png" alt="Avatar">
+			</div>
+			<div class="info">
+				<div class="name">222</div>
+				<div class="comment">产品非常好会回购</div>
+			</div>
+		</div>
+		<div class="review">
+			<div class="avatar">
+				<img src="img/logo.png" alt="Avatar">
+			</div>
+			<div class="info">
+				<div class="name">333</div>
+				<div class="comment">产品非常好会回购</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

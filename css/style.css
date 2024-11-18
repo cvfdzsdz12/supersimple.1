@@ -1,0 +1,139 @@
+/* 设置全局样式 */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+/* 设置头部样式 */
+#header {
+	background-color: #f8bbd0; /* 设置背景颜色 */
+	margin: 5px 4px; /* 设置外边距 */
+	padding: 20px; /* 设置内边距 */
+	text-align: center; /* 设置文本居中 */
+	border-radius: 20px 20px 0 0; /* 设置边框圆角 */
+}
+
+/* 设置头部标题样式 */
+#header h1 {
+	color: #fff; /* 设置字体颜色 */
+	font-size: 48px; /* 设置字体大小 */
+	margin: 0; /* 设置外边距 */
+	padding: 0; /* 设置内边距 */
+}
+
+/* 设置导航栏样式 */
+#nav {
+	background-color: #fce4ec; /* 设置背景颜色 */
+	margin: 5px 4px; /* 设置外边距 */
+	padding: 10px; /* 设置内边距 */
+	border-radius: 0 0 20px 20px; /* 设置边框圆角 */
+	text-align: center; /* 设置文本居中 */
+}
+
+/* 设置导航栏链接样式 */
+#nav a {
+	color: #333; /* 设置字体颜色 */
+	text-decoration: none; /* 取消下划线 */
+	padding: 10px; /* 设置内边距 */
+	margin: 10px; /* 设置外边距 */
+	border-radius: 10px; /* 设置边框圆角 */
+	background-color: #fff; /* 设置背景颜色 */
+	display: inline-block; /* 设置为行内块元素 */
+	transition: all 0.3s ease-in-out; /* 设置过渡效果 */
+}
+
+/* 设置导航栏链接鼠标悬停样式 */
+#nav a:hover {
+	background-color: #f8bbd0; /* 设置背景颜色 */
+	color: #fff; /* 设置字体颜色 */
+	transform: scale(1.1); /* 设置缩放效果 */
+}
+
+/* 设置展示区样式 */
+#show {
+	height: 600px; /* 设置高度 */
+	margin: 20px; /* 设置外边距 */
+	padding: 20px; /* 设置内边距 */
+	background-image: url("../img/bg.jpg");
+  background-position: center center;
+    /* 背景图不平铺 */
+    background-repeat: no-repeat;
+    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+    background-attachment: fixed;
+    /* 让背景图基于容器大小伸缩 */
+    background-size: cover;
+
+	background-color: #d5f2fd; /* 设置背景颜色 */
+	border-radius: 20px; /* 设置边框圆角 */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 设置阴影 */
+	text-align: center; /* 设置文本居中 */
+	position: relative; /* 设置定位 */
+	overflow: hidden; /* 设置溢出隐藏 */
+}
+
+/* 设置展示区图片样式 */
+#show img {
+	width: 200px; /* 设置宽度 */
+	height: 200px; /* 设置高度 */
+	border-radius: 50%; /* 设置边框圆角 */
+	margin: 20px; /* 设置外边距 */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 设置阴影 */
+	animation: rotate 2s linear infinite; /* 设置动画效果 */
+}
+
+/* 设置展示区视频样式 */
+#show video{
+	position: absolute; /* 设置定位 */
+	top: 50%; /* 设置顶部距离 */
+	left: 50%; /* 设置左侧距离 */
+	min-width: 100%; /* 设置最小宽度 */
+	min-height: 100%; /* 设置最小高度 */
+	width: auto; /* 设置宽度自适应 */
+	height: auto; /* 设置高度自适应 */
+	transform: translate(-50%, -50%); /* 设置平移效果 */
+}
+
+/* 设置展示区其他内容样式 */
+#othermain{
+	position: absolute; /* 设置定位 */
+	top: 50%; /* 设置顶部距离 */
+	left: 50%; /* 设置左侧距离 */
+	transform: translate(-50%, -50%); /* 设置平移效果 */
+	color: #fff; /* 设置字体颜色 */
+}
+
+/* 设置动画样式 */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg); /* 设置起始旋转角度 */
+	}
+	to {
+		transform: rotate(360deg); /* 设置结束旋转角度 */
+	}
+}
+
+/* 设置底部样式 */
+#underpart{
+	background-image: url(../img/pattern.png); /* 设置背景图片 */
+	background-position: center; /* 设置背景图片位置 */
+}
+
+/* 设置底部iframe样式 */
+#underpart iframe{
+	width: 100%; /* 设置宽度 */
+	height: 600px; /* 设置高度 */
+}
+
+/* 设置页脚样式 */
+#footer {
+	background-color: #fad1dc; /* 设置背景颜色 */
+	border-radius: 10px 30px 20px 60px; /* 设置边框圆角 */
+	height: 50px; /* 设置高度 */
+	text-align: center; /* 设置文本居中 */
+	line-height: 50px; /* 设置行高 */
+	font-size: 20px; /* 设置字体大小 */
+	color: #000; /* 设置字体颜色 */
+	position: relative; /* 设置定位 */
+	margin: 5px 4px; /* 设置外边距 */
+}
